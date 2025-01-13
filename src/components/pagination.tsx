@@ -48,7 +48,7 @@ export function Pagination({
             className="h-8 w-8 p-0"
           >
             <ChevronLeft className="h-4 w-4" />
-            <span className="sr-only">Página ante rior</span>
+            <span className="sr-only">Página anterior</span>
           </Button>
           <Button
             disabled={pageIndex === pages - 1}
