@@ -1,12 +1,12 @@
 import { api } from '@/lib/axios'
 
-interface postUptdateManagedRestaurantResponse {
+export interface postUptdateManagedRestaurantBody {
   name: string
   description: string | null
 }
 export async function patchUptdateManagedRestaurant({
   name,
   description,
-}: postUptdateManagedRestaurantResponse) {
+}: postUptdateManagedRestaurantBody) {
   await api.put('/profile', { name, description })
 }

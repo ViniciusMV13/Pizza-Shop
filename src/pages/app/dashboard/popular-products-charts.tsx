@@ -23,7 +23,7 @@ export function PopularProductsChart() {
   return (
     <Card className="col-span-3">
       <CardHeader className="pb-8">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between ">
           <CardTitle className="text-base font-medium">
             Produtos populares
           </CardTitle>
@@ -68,8 +68,8 @@ export function PopularProductsChart() {
                     >
                       {popularProducts[index].product.length > 12
                         ? popularProducts[index].product
-                          .substring(0, 12)
-                          .concat('...')
+                            .substring(0, 12)
+                            .concat('...')
                         : popularProducts[index].product}{' '}
                       ({value})
                     </text>
@@ -89,8 +89,8 @@ export function PopularProductsChart() {
             </PieChart>
           </ResponsiveContainer>
         ) : (
-          <div className='flex h-[240px] w-full items-center justify-center'>
-            <Loader2 className='h-8 w-8 text-muted-foreground animate-spin' />
+          <div className="flex h-[240px] w-full items-center justify-center">
+            <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
           </div>
         )}
       </CardContent>

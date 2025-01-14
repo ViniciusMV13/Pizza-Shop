@@ -3,6 +3,7 @@ import { Utensils } from 'lucide-react'
 
 import { getDayOrdersAmount } from '@/api/get-day-orders-amount'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+
 import { MetricCardSkeleton } from './metric-card-skeleton'
 
 export function DayOrdersAmountCard() {
@@ -41,7 +42,9 @@ export function DayOrdersAmountCard() {
               )}
             </p>
           </>
-        ) : (<MetricCardSkeleton />)}
+        ) : (
+          <MetricCardSkeleton />
+        )}
       </CardContent>
     </Card>
   )
