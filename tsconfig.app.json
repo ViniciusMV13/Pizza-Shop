@@ -36,5 +36,5 @@
   "include": [
     "src",
     "test"
-  ]
+, "tests/dashboard.e2e-spec.ts", "tests/order.e2e-spec.ts", "tests/sign-in.e2e-spec.ts", "tests/sign-up.e2e-spec.ts", "tests/store-profile.e2e-spec.ts"  ]
 }

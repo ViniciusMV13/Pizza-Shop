@@ -24,7 +24,7 @@ import { Label } from './ui/label'
 import { Textarea } from './ui/textarea'
 
 const storeProfileSchema = z.object({
-  name: z.string(),
+  name: z.string().min(1),
   description: z.string().nullable(),
 })
 
@@ -58,7 +58,7 @@ export function StoreProfileDialog() {
         name: data.name,
       })
 
-      toast.success('Informações atualizadas com sucesso.')
+      toast.success('Informações atualizadas com sucesso!')
     } catch {
       toast.error('Falha ao enviar as informações.')
     }
@@ -71,7 +71,6 @@ export function StoreProfileDialog() {
     const cached = queryClient.getQueryData<getManagedRestaurantResponse>([
       'managed-restaurant',
     ])
-    console.log(cached)
     if (cached) {
       queryClient.setQueryData<getManagedRestaurantResponse>(
         ['managed-restaurant'],
